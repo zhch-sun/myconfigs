@@ -1,6 +1,5 @@
-export PATH="/home/zhicheng/local/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/zhicheng/.oh-my-zsh
@@ -94,6 +93,7 @@ alias m='f -e mplayer' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
 
 # auto suggenstion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
 # share history in terminals
 unsetopt share_history
@@ -117,12 +117,12 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 # other config
-export PYTHONPATH=/home/zhicheng/mxnet/python
+# export PYTHONPATH=/home/zhicheng/mxnet/python
 
 # fanqiang
-alias hp="http_proxy=http://localhost:8118"
+# alias hp="http_proxy=http://localhost:8118"
 
 # cuda
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+# export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
