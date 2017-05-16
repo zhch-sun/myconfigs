@@ -123,6 +123,7 @@ alias -s bz2='tar -xjvf'
 # alias hp="http_proxy=http://localhost:8118"
 
 # cuda
-# export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# caffe
+export PYTHONPATH=/home/zhicheng/workspace/caffe/python/ 
