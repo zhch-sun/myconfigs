@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux ubuntu vi-mode  copydir copyfile copybuffer last-working-dir zsh_reload sudo colored-man-pages history-substring-search fasd zsh-autosuggestions) #common-aliases
+plugins=(git tmux ubuntu copydir copyfile copybuffer last-working-dir zsh_reload sudo colored-man-pages history-substring-search fasd zsh-autosuggestions) #common-aliases vi-mode
 
 source $ZSH/oh-my-zsh.sh
 

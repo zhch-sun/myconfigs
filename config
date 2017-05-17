@@ -1,0 +1,30 @@
+
+ServerAliveInterval 10
+
+Host school
+	HostName 10.14.104.232
+	User zhicheng
+
+Host 111
+	HostName 192.168.3.111
+	User zhicheng
+
+Host 112
+	HostName 192.168.3.112
+	User zhicheng
+
+Host 113
+	HostName 192.168.3.113
+	User zhicheng
+
+Host 114
+	HostName 192.168.3.114
+	User zhicheng
+
+Host 194
+	HostName 192.168.3.194
+	User zhicheng
+
+Host work
+	HostName 192.168.6.129
+	User zhicheng
