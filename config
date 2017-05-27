@@ -21,6 +21,10 @@ Host 114
 	HostName 192.168.3.114
 	User zhicheng
 
+Host 152
+  HostName 192.168.3.152
+  User zhicheng
+
 Host 194
 	HostName 192.168.3.194
 	User zhicheng
