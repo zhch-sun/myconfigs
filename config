@@ -32,3 +32,8 @@ Host work
 Host mac
 	HostName 192.168.1.144
 	User zhichengsun
+
+Host datacenter
+  HostName 211.103.220.74
+  User zhichengsun
+  Port 8011
