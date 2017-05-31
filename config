@@ -25,7 +25,7 @@ Host 152
   HostName 192.168.3.152
   User zhicheng
 
-Host 194
+Host 193
 	HostName 192.168.3.193
 	User zhicheng
 
