@@ -1,47 +1,62 @@
 
-ServerAliveInterval 10
 
 Host school
 	HostName 10.14.104.232
 	User zhicheng
+    ServerAliveInterval 10
+
+Host 107
+	HostName 192.168.3.107
+	User zhicheng
+    ServerAliveInterval 10
 
 Host 111
 	HostName 192.168.3.111
 	User zhicheng
+    ServerAliveInterval 10
 
 Host 112
 	HostName 192.168.3.112
 	User zhicheng
+    ServerAliveInterval 10
 
 Host 113
 	HostName 192.168.3.113
 	User zhicheng
+    ServerAliveInterval 10
 
 Host 114
 	HostName 192.168.3.114
 	User zhicheng
+    ServerAliveInterval 10
 
 Host 152
   HostName 192.168.3.152
   User zhicheng
+  ServerAliveInterval 10
 
 Host 193
 	HostName 192.168.3.193
 	User zhicheng
+    ServerAliveInterval 10
 
 Host 194
 	HostName 192.168.3.194
 	User zhicheng
+    ServerAliveInterval 10
 
 Host work
 	HostName 192.168.6.129
 	User zhicheng
+    ServerAliveInterval 10
 
 Host mac
 	HostName 192.168.1.144
 	User zhichengsun
+    ServerAliveInterval 10
 
 Host datacenter
   HostName 211.103.220.74
   User zhichengsun
   Port 8011
+  ServerAliveInterval 10
