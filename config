@@ -10,6 +10,12 @@ Host 107
 	User zhicheng
     ServerAliveInterval 10
 
+Host 202
+	HostName 192.168.3.202
+	User zhicheng
+    ServerAliveInterval 10
+
+
 Host 111
 	HostName 192.168.3.111
 	User zhicheng
