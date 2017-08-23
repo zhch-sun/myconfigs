@@ -97,6 +97,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
 # share history in terminals
 unsetopt share_history
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+# setopt hist_ignore_all_dups
+# setopt hist_ignore_space
+
 # my aliases
 alias cls='clear'
 alias ll='ls -l'
@@ -122,8 +128,24 @@ alias -s bz2='tar -xjvf'
 # fanqiang
 # alias hp="http_proxy=http://localhost:8118"
 
+## cuda
+#export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+#
+## caffe
+#export PYTHONPATH=/home/zhicheng/workspace/caffe/python/ 
+
+
 # cuda
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 # caffe
-export PYTHONPATH=/home/zhicheng/workspace/caffe/python/ 
+#export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe/python/ 
+export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe_ssd/python/ 
+#export PATH=/home/zhicheng/anaconda3/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/home/zhicheng/libs/lib:$LD_LIBRARY_PATH    
+export LD_LIBRARY_PATH=/home/zhicheng/libs/opencv-2.4.13/release/installed/lib:$LD_LIBRARY_PATH    
+#export LD_LIBRARY_PATH=/home/zhicheng/anaconda3/envs/caffe/lib:$LD_LIBRARY_PATH    
+#export PYTHONPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/
+
+
+

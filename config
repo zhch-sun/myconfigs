@@ -56,6 +56,11 @@ Host work
 	User zhicheng
     ServerAliveInterval 10
 
+Host haoquan
+	HostName 192.168.6.89
+	User zhicheng
+    ServerAliveInterval 10
+
 Host mac
 	HostName 192.168.1.144
 	User zhichengsun

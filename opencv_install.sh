@@ -31,9 +31,12 @@ mkdir installed
 # sudo make install
 
 # another compile
-cmake -G "Unix Makefiles" -DCMAKE_CXX_COMPILER=/usr/bin/g++ CMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/home/zhicheng/libs/opencv-2.4.13/release/installed -DWITH_TBB=ON -DBUILD_NEW_PYTHON_SUPPORT=ON -DWITH_V4L=ON  -DBUILD_EXAMPLES=ON -DWITH_OPENGL=ON -DINSTALL_TO_MANGLED_PATHS=ON -DINSTALL_CREATE_DISTRIB=ON -DENABLE_FAST_MATH=ON -DWITH_IMAGEIO=ON -DWITH_GSTREAMER=ON ..
+# cmake -G "Unix Makefiles" -DCMAKE_CXX_COMPILER=/usr/bin/g++ CMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/home/zhicheng/libs/opencv-2.4.13/release/installed -DWITH_TBB=ON -DBUILD_NEW_PYTHON_SUPPORT=ON -DWITH_V4L=ON  -DBUILD_EXAMPLES=ON -DWITH_OPENGL=ON -DINSTALL_TO_MANGLED_PATHS=ON -DINSTALL_CREATE_DISTRIB=ON -DENABLE_FAST_MATH=ON -DWITH_IMAGEIO=ON -DWITH_GSTREAMER=ON -DBUILD_TIFF=ON ..
 
-make all -j23 # 24 cores
+# another compile
+cmake -G "Unix Makefiles" -DCMAKE_CXX_COMPILER=/usr/bin/g++ CMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/home/zhicheng/libs/opencv-2.4.13/release/installed -DINSTALL_TO_MANGLED_PATHS=ON -DINSTALL_CREATE_DISTRIB=ON  -DWITH_IMAGEIO=ON -DWITH_GSTREAMER=ON -DBUILD_TIFF=ON -DWITH_1394=OFF -DPYTHON_NUMPY_INCLUDE_DIR=/home/zhicheng/anaconda3/envs/caffe/lib/python2.7/site-packages/numpy/core/include ..
+
+make all -j48 # 24 cores
 sudo make install
 
 # ignore libdc1394 error http://stackoverflow.com/questions/12689304/ctypes-error-libdc1394-error-failed-to-initialize-libdc1394
