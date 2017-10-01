@@ -5,6 +5,17 @@ Host school
 	User zhicheng
     ServerAliveInterval 10
 
+Host jiufeng
+	HostName 117.40.83.208
+	User shentong
+    Port 22222
+    ServerAliveInterval 10
+
+Host 103
+	HostName 192.168.3.103
+	User zhicheng
+    ServerAliveInterval 10
+
 Host 107
 	HostName 192.168.3.107
 	User zhicheng
@@ -40,6 +51,11 @@ Host 152
   HostName 192.168.3.152
   User zhicheng
   ServerAliveInterval 10
+
+Host 192
+	HostName 192.168.3.192
+	User zhicheng
+    ServerAliveInterval 10
 
 Host 193
 	HostName 192.168.3.193
