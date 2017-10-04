@@ -71,3 +71,10 @@ Host datacenter
   User zhichengsun
   Port 8011
   ServerAliveInterval 10
+
+Host jiufeng
+  HostName 117.40.83.208
+  User shentong
+  Port 22222
+  ServerAliveInterval 10
+

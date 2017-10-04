@@ -15,11 +15,11 @@ cd vim
             --enable-multibyte \
             --enable-rubyinterp=yes \
             --enable-pythoninterp=yes \
-            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu\
+            --with-python-config-dir=/home/zhicheng/anaconda3/envs/caffe/lib/python2.7/config \
             --enable-perlinterp=yes \
             --enable-luainterp=yes \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
-make VIMRUNTIMEDIR=/usr/share/vim/vim80
+make vimruntimedir=/usr/share/vim/vim80
 
 #install vim with checkinstall
 sudo apt-get install checkinstall
@@ -47,3 +47,4 @@ sudo update-alternatives --set vi /usr/bin/vim
 #              --enable-luainterp=yes \
 #              --enable-gui=gtk2 --enable-cscope --prefix=/usr
 #  make VIMRUNTIMEDIR=/usr/share/vim/vim80
+
