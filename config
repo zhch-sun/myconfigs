@@ -100,3 +100,13 @@ Host jiufeng
   Port 22222
   ServerAliveInterval 10
 
+Host bwg
+  HostName 97.64.20.83
+  User root
+  Port 27209
+  ServerAliveInterval 10
+
+Host cushing
+  HostName 117.50.2.154
+  User ubuntu
+  ServerAliveInterval 10
