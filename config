@@ -87,6 +87,12 @@ Host datacenter
   User zhichengsun
   Port 8011
   ServerAliveInterval 10
+  ForwardAgent yes
+ 
+Host centerserver
+  HostName 192.168.3.202
+  User zhicheng
+  ProxyCommand ssh datacenter -q -W %h:%p datacenter
 
 Host jiufeng
   HostName 117.40.83.208
