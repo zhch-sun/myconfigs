@@ -67,6 +67,11 @@ Host 194
 	User zhicheng
     ServerAliveInterval 10
 
+Host 8
+	HostName 192.168.3.8
+	User zhicheng
+    ServerAliveInterval 10
+
 Host work
 	HostName 192.168.6.129
 	User zhicheng
