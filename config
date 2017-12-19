@@ -73,7 +73,7 @@ Host 8
     ServerAliveInterval 10
 
 Host work
-	HostName 192.168.6.129
+	HostName 192.168.7.53
 	User zhicheng
     ServerAliveInterval 10
 
