@@ -72,6 +72,11 @@ Host 8
 	User zhicheng
     ServerAliveInterval 10
 
+Host 762
+	HostName 192.168.7.62
+	User deepglint
+    ServerAliveInterval 10
+
 Host work
 	HostName 192.168.7.53
 	User zhicheng
