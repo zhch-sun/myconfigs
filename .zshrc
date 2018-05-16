@@ -141,7 +141,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 # caffe
 #export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe/python/ 
 export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe_ssd/python/ 
-#export PATH=/home/zhicheng/anaconda3/bin${PATH:+:${PATH}}
+export PATH=/home/zhicheng/anaconda3/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/home/zhicheng/libs/lib:$LD_LIBRARY_PATH    
 export LD_LIBRARY_PATH=/home/zhicheng/libs/opencv-2.4.13/release/installed/lib:$LD_LIBRARY_PATH    
 #export LD_LIBRARY_PATH=/home/zhicheng/anaconda3/envs/caffe/lib:$LD_LIBRARY_PATH    
