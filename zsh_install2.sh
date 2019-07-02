@@ -1,8 +1,6 @@
-cp .zshrc ~/
-source ~/.zshrc
-
 # install zsh-autosugestions
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # copy zshrc file
-cp .zshrc /home/zhicheng/
+cp .zshrc ~/
+source ~/.zshrc

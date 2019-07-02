@@ -1,26 +1,39 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/zhicheng/.oh-my-zsh
+export ZSH="/Users/sunzhicheng/.oh-my-zsh"
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -41,17 +54,21 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux ubuntu copydir copyfile copybuffer last-working-dir zsh_reload sudo colored-man-pages history-substring-search fasd zsh-autosuggestions) #common-aliases vi-mode
+plugins=(git tmux copydir copyfile copybuffer last-working-dir zsh_reload sudo colored-man-pages history-substring-search fasd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,9 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -83,69 +97,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export TERM=xterm-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
 
 # fasd
-eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install posix-alias )"
+fasd_cache="$HOME/.fasd-init-bash"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install posix-alias >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
+# eval "$(fasd --init zsh-hook zsh-ccomp zsh-ccomp-install zsh-wcomp zsh-wcomp-install posix-alias )"
 alias v='f -e vim' # quick opening files with vim
-alias m='f -e mplayer' # quick opening files with mplayer
 alias o='a -e xdg-open' # quick opening files with xdg-open
 
-# auto suggenstion
+# auto-suggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
-# share history in terminals
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=100"
 unsetopt share_history
-HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
 SAVEHIST=10000000
-# setopt hist_ignore_all_dups
-# setopt hist_ignore_space
 
-# my aliases
-alias cls='clear'
-alias ll='ls -l'
-alias la='ls -a'
-alias vi='vim'
-alias javac="javac -J-Dfile.encoding=utf8"
-alias grep="grep --color=auto"
-alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
-alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
-alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似
-alias -s js=vi
-alias -s c=vi
-alias -s java=vi
-alias -s txt=vi
-alias -s gz='tar -xzvf'
-alias -s tgz='tar -xzvf'
-alias -s zip='unzip'
-alias -s bz2='tar -xjvf'
-
-# other config
-# export PYTHONPATH=/home/zhicheng/mxnet/python
-
-# fanqiang
-# alias hp="http_proxy=http://localhost:8118"
-
-## cuda
-#export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-#
-## caffe
-#export PYTHONPATH=/home/zhicheng/workspace/caffe/python/ 
-
-
-# cuda
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-# caffe
-#export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe/python/ 
-export PYTHONPATH=/home/zhicheng/workspace/jiufeng/caffe_ssd/python/ 
-export PATH=/home/zhicheng/anaconda3/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/home/zhicheng/libs/lib:$LD_LIBRARY_PATH    
-export LD_LIBRARY_PATH=/home/zhicheng/libs/opencv-2.4.13/release/installed/lib:$LD_LIBRARY_PATH    
-#export LD_LIBRARY_PATH=/home/zhicheng/anaconda3/envs/caffe/lib:$LD_LIBRARY_PATH    
-#export PYTHONPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/
-
-
-
+# color
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
