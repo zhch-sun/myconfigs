@@ -119,3 +119,7 @@ SAVEHIST=10000000
 # color
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
+
+# conda
+export PATH="$HOME/miniconda3/bin:$PATH"
+
