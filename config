@@ -32,40 +32,10 @@ Host 111
 	User zhicheng
     ServerAliveInterval 10
 
-Host 112
-	HostName 192.168.3.112
-	User zhicheng
-    ServerAliveInterval 10
-
-Host 113
-	HostName 192.168.3.113
-	User zhicheng
-    ServerAliveInterval 10
-
-Host 114
-	HostName 192.168.3.114
-	User zhicheng
-    ServerAliveInterval 10
-
 Host 152
   HostName 192.168.3.152
   User zhicheng
   ServerAliveInterval 10
-
-Host 192
-	HostName 192.168.3.192
-	User zhicheng
-    ServerAliveInterval 10
-
-Host 193
-	HostName 192.168.3.193
-	User zhicheng
-    ServerAliveInterval 10
-
-Host 194
-	HostName 192.168.3.194
-	User zhicheng
-    ServerAliveInterval 10
 
 Host 8
 	HostName 192.168.3.8
@@ -79,11 +49,6 @@ Host 151
 
 Host work
 	HostName 192.168.7.53
-	User zhicheng
-    ServerAliveInterval 10
-
-Host haoquan
-	HostName 192.168.6.89
 	User zhicheng
     ServerAliveInterval 10
 
